@@ -13,6 +13,5 @@ public class Question {
     private String question;
     private List<String> options;
     private int correctIndex;
-
-    // Constructors, Getters, and Setters
+    private String category; // New field for category
 }
