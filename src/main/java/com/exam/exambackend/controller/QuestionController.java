@@ -15,8 +15,15 @@ public class QuestionController {
         this.questionRepository = questionRepository;
     }
 
+    // Endpoint to fetch all questions
     @GetMapping
     public List<Question> getAllQuestions() {
         return questionRepository.findAll();
+    }
+
+    // Endpoint to fetch questions by category
+    @GetMapping("/byCategory")
+    public List<Question> getQuestionsByCategory(@RequestParam String category) {
+        return questionRepository.findByCategory(category);
     }
 }
